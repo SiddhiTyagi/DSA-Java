@@ -1,3 +1,20 @@
+/**
+ * PROBLEM NAME: Area of a Rectangle
+ * 
+ * DESCRIPTION:
+ * Calculates the geometric area of a rectangle using dynamic, user-provided 
+ * dimensions passed via the console.
+ * 
+ * APPROACH:
+ * Employs Java's Scanner class to read high-precision floating-point numbers 
+ * (`double`). It captures the length and width inputs and uses standard 
+ * mathematical multiplication (`*`) to compute the final area metric.
+ * 
+ * COMPLEXITY:
+ * Time Complexity: O(1) - The arithmetic operation executes instantaneously.
+ * Space Complexity: O(1) - Minimal allocation of primitive double variables.
+ */
+
 import java.util.Scanner;
 
 public class AreaofRectangle{
