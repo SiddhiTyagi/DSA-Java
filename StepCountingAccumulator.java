@@ -25,16 +25,29 @@ public class StepCountingAccumulator {
         int limit=sc.nextInt();
 
         System.out.println("The sequence till "+limit+" is: ");
-        
         for(int i=0;i<=limit;i++){
-            System.out.println(i);
+        System.out.print(i);
+
+        if(i<limit){
+        System.out.print(", ");
+        }
+    }
+
+        System.out.println();
+        
+        System.out.print("The even sequence is: ");
+        for(int i=1;i<=limit;i++){
             if(i%2==0){
                 System.out.print(i);
-            }
-            System.out.print(", ");
-            sum=sum+i;
+                sum=sum+i;
+                
+                if(i+2<=limit){
+                    System.out.print(", ");
         }
-        System.out.println("Sum of even digits from the sequence = ");
-        sc.close();
     }
+}
+System.out.println();
+System.out.println("Sum of even digits from the sequence = "+sum);
+sc.close();
+}
 }
