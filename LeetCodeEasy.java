@@ -11,8 +11,8 @@
  * repeatedly divides the integer by 2, verifying that no odd remainders are left behind.
  * 
  * COMPLEXITY:
- * - Time Complexity: [Leave blank for now]
- * - Space Complexity: [Leave blank for now]
+ * - Time Complexity: O(log<sub>2</sub>N) Logarithmic time
+ * - Space Complexity: O(1) Constant space
  */
 
 import java.util.Scanner;
@@ -25,33 +25,24 @@ public class LeetCodeEasy {
 
         System.out.print(num);
 
-        while(num<=0){
-            if(num==0){
-                System.out.print(" is NOT a perfect power of two!");
-                break;
-            }else{
-                System.out.print(" is NOT a perfect power of two!");
-                break;
-        }
-    }
-
-    if(num==1){
-        System.out.print(" is a perfect power of two!");
-    }
-        while(num%2!=0){
+        if(num<=0){
             System.out.print(" is NOT a perfect power of two!");
-            break;
-        }
-
-        for(int i=1;i<=num;i++){
-            while(num%2==0){
-                num=num/2;
-            }
-            if(num==1){
+            }else if(num==1){
                 System.out.print(" is a perfect power of two!");
+            }else if(num%2!=0){
+                System.out.print(" is NOT a perfect power of two!");
+            }else{
+                while(num%2==0){
+                    num=num/2;
+                }
+                if(num==1){
+                    System.out.print(" is a perfect power of two!");
+                }else{
+                    System.out.print(" is NOT perfect power of two!");
+                }
             }
-        }
         sc.close();
+        System.out.println();
     }
 }
 
