@@ -11,7 +11,9 @@
  * using modulo math, expands the placement, and reduces the base.
  * 
  * COMPLEXITY:
- * - Time Complexity: 
+ * - Time Complexity: O(log<sub>10</sub>N) 
+ * Since you divide the number by 10 on every step (num = num / 10), the loop doesn't run N times. 
+ * Instead, the number of steps grows logarithmically based on the total count of digits in the number.
  * - Space Complexity: O(1)
  */
 
