@@ -11,8 +11,8 @@
  * 400-year alignment rule before returning a true or false state.
  * 
  * COMPLEXITY:
- * - Time Complexity: 
- * - Space Complexity: 
+ * - Time Complexity: O(1)
+ * - Space Complexity: O(1)
  */
 
 import java.util.Scanner;
@@ -24,9 +24,14 @@ public class LeapYear {
         int year=sc.nextInt();
 
         boolean result=checkLeapYear(year);
-        System.out.println(result);
+        if(result){
+            System.out.println(year+" is a Leap Year!");
+        }else{
+            System.out.println(year+" is NOT a Leap Year!");
+        }
+        sc.close();
     }
     public static boolean checkLeapYear(int year) {
-        
+        return ((year%4==0 && year%100!=0) || (year%400==0));
     }
 }
