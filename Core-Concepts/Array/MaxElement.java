@@ -12,7 +12,7 @@
  * 4. Compare each element to `max`. If `firstArray[i] > max`, update `max = firstArray[i]`.
  * 
  * COMPLEXITY:
- * - Time Complexity: O(N) 
+ * - Time Complexity: O(3N) -> O(N)
  * - Space Complexity: O(N)
  */
 
