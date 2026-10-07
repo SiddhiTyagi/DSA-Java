@@ -15,11 +15,55 @@
  * 5. Calculate each new element using the formula: `runningSum[i] = runningSum[i - 1] + arr[i]`.
  * 
  * COMPLEXITY:
- * - Time Complexity: O()
- * - Space Complexity: O()
+ * - Time Complexity: O(4N) -> O(N)
+ * - Space Complexity: O(N)
  */
 
 
-public class RunningSumArray {
-    
+import java.util.Scanner;
+public class RunningSumArray{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter size of array = ");
+        int size = sc.nextInt();
+
+        int arr[] = new int[size];
+
+        for(int i = 0; i <= size-1; i++){
+            System.out.print("Enter "+(i+1)+" element = ");
+            arr[i] = sc.nextInt();
+        }
+
+        System.out.print("Array = [");
+        for(int i = 0; i<=size-1; i++){
+            System.out.print(arr[i]);
+
+            if(i<=size-2){
+                System.out.print(", ");
+            }
+        }
+        System.out.print("]");
+
+        int arr2[] = new int[size];
+        int sum =0;
+
+        for(int i = 0; i <= size-1; i++){
+            sum = sum + arr[i];
+            arr2[i] =  sum;
+        }
+        System.out.println();
+
+        System.out.print("New array = [");
+        for( int i = 0; i <= size-1; i++){
+            System.out.print(arr2[i]);
+
+            if(i<=size-2){
+                System.out.print(", ");
+            }
+        }
+        System.out.print("]");
+        System.out.println();
+        sc.close();
+    }
 }
