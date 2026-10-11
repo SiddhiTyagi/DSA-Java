@@ -1,7 +1,7 @@
-// Left Rotate an Array by D Places
+// Left Rotate an Array by 2 Places
 import java.util.Scanner;
 
-public class LeftRotatebyDPlaces {
+public class LeftRotateby2Places {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -18,8 +18,20 @@ public class LeftRotatebyDPlaces {
         System.out.print("Enter D = ");
         int d = sc.nextInt();
 
-        // Write your left rotation logic here
+        int temp[] = new int[d];
+        for (int i = 0; i < d; i++){
+            temp[i] = arr[i];
+        }
 
+        for (int i = d; i < size; i++){
+            arr[i-d] = arr[i];
+        }
+
+        int j = 0;
+        for (int i = size-d; i < size; i++){
+            arr[i] = temp[j];
+            j++;
+        }
 
         // Print the array
         System.out.print("[");
