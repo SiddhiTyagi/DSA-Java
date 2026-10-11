@@ -8,6 +8,11 @@ public class LeftRotateby2Places {
         System.out.print("Enter size of array = ");
         int size = sc.nextInt();
 
+        while (size < 1){
+            System.out.print("Enter size of array = ");
+            size = sc.nextInt();
+        }
+
         int arr[] = new int[size];
 
         for (int i = 0; i < size; i++) {
@@ -18,6 +23,7 @@ public class LeftRotateby2Places {
         System.out.print("Enter D = ");
         int d = sc.nextInt();
 
+        d = d % size;
         int temp[] = new int[d];
         for (int i = 0; i < d; i++){
             temp[i] = arr[i];
