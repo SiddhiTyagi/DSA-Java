@@ -14,8 +14,8 @@
  * 4. Ensure that the original array contains the reversed characters.
  *
  * COMPLEXITY:
- * - Time Complexity: O()
- * - Space Complexity: O()
+ * - Time Complexity: O(2n) - O(n)
+ * - Space Complexity: O(n)
  */
 
 import java.util.Scanner;
@@ -24,21 +24,23 @@ public class ReverseString {
     public static void main(String[] args) {
         Scanner sc = new Scanner (System.in);
 
-        System.out.print("Enter string = ");    
-        char string[] = sc.next().toCharArray();
+        String input = sc.next();
+
+        char arr[] = input.toCharArray();
 
         int i = 0;
-        int j = string.length - 1;
-        
-        while (i < j){
-            char temp = string[i];
-            string[i] = string[j];
-            string[j] = temp;
+        int j = arr.length - 1;
+
+        while (i < j) {
+            char temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
 
             i++;
             j--;
         }
-        System.out.println("Reverse of given string = "+new String(string));
+
+        System.out.println("Reversed string = "+ String.valueOf(arr));
         sc.close();
     }
 }
