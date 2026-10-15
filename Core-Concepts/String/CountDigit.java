@@ -16,8 +16,8 @@
  * 5. Print the final count.
  *
  * COMPLEXITY:
- * - Time Complexity: O()
- * - Space Complexity: O()
+ * - Time Complexity: O(n)
+ * - Space Complexity: O(1)
  */
 
 import java.util.Scanner;
