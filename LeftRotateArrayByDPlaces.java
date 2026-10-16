@@ -46,7 +46,7 @@ public class LeftRotateArrayByDPlaces {
             k++;
         }
 
-        System.out.print("Left Rotated Array = [");
+        System.out.print("\nLeft Rotated Array = [");
         for (int i = 0; i < n; i++) {
             System.out.print(arr[i]);
 
